@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ thống soạn giảng 5512</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      /* Lesson Plan Specific Styles */
+      .lesson-plan-content {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 14pt;
+        line-height: 1.5;
+        color: #000;
+      }
+      .lesson-plan-content h3 {
+        font-size: 14pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+      }
+      .lesson-plan-content h4 {
+        font-size: 14pt;
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+      }
+      .lesson-plan-content b, .lesson-plan-content strong {
+        font-weight: bold;
+      }
+      .lesson-plan-content p {
+        margin-bottom: 0.5em;
+        text-align: justify;
+      }
+      .lesson-plan-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      .lesson-plan-content th, .lesson-plan-content td {
+        border: 1px solid #000;
+        padding: 8px;
+        vertical-align: top;
+        text-align: left;
+      }
+      /* Modified: Remove default list bullets (dots) */
+      .lesson-plan-content ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0.5em;
+      }
+      .lesson-plan-content li {
+        margin-bottom: 0.25em;
+        padding-left: 0;
+      }
+
+      /* Knowledge Box Style (Hộp kiến thức) - Updated: Remove Frame */
+      .knowledge-box {
+        border: none;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: transparent;
+      }
+      .knowledge-box-title {
+        font-weight: bold;
+        /* text-decoration: underline; */
+        margin-bottom: 5px;
+        display: block;
+      }
+      
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+        }
+        body {
+          background-color: white;
+          margin: 0;
+          padding: 0;
+        }
+        #root {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        .lesson-plan-content {
+          padding: 0 !important;
+          width: 100% !important;
+          font-size: 13pt; /* Standard print size */
+        }
+        /* Ensure tables break correctly */
+        table, tr, td, th, tbody, thead, tfoot {
+          page-break-inside: avoid !important;
+        }
+        /* Knowledge box print style */
+        .knowledge-box {
+          border: none;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+  </body>
+</html>
